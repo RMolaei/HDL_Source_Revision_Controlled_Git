@@ -1,0 +1,13 @@
+# gitignore script
+prj/p*
+prj/Vivado_core_cache/*
+!prj/Vivado_core_cache/Note
+prj/Vivado_core_repository/*
+!prj/Vivado_core_repository/Note
+
+src/core/**
+!src/core/
+!src/core/**/
+!src/core/vivado_core_generate.tcl
+!src/core/**/*.xci
+!src/core/**/*.xml
