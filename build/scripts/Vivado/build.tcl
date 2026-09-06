@@ -35,7 +35,7 @@
 proc checkRequiredFiles { origin_dir} {
   set status true
   set files [list \
- "[file normalize "$origin_dir/../../src/xdc/debug.xdc"]"\
+ "[file normalize "$origin_dir/../../../src/xdc/debug.xdc"]"\
   ]
   foreach ifile $files {
     if { ![file isfile $ifile] } {
@@ -111,7 +111,7 @@ if { $::argc > 0 } {
 }
 
 # Set the directory path for the original project from where this script was exported
-set orig_proj_dir "[file normalize "$origin_dir/../../prj/p1"]"
+set orig_proj_dir "[file normalize "$origin_dir/../../../prj/p1"]"
 
 # Check for paths and files needed for project creation
 set validate_required 0
@@ -125,7 +125,7 @@ if { $validate_required } {
 }
 
 # Create project
-create_project ${_xil_proj_name_} $origin_dir/../../prj/${_xil_proj_name_} -part xczu7ev-ffvc1156-2-i
+create_project ${_xil_proj_name_} $origin_dir/../../../prj/${_xil_proj_name_} -part xczu7ev-ffvc1156-2-i
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
@@ -172,18 +172,18 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize "$origin_dir/../../src/xdc/debug.xdc"]"
+set file "[file normalize "$origin_dir/../../../src/xdc/debug.xdc"]"
 set file_added [add_files -norecurse -fileset $obj [list $file]]
-set file "$origin_dir/../../src/xdc/debug.xdc"
+set file "$origin_dir/../../../src/xdc/debug.xdc"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
 set_property -name "file_type" -value "XDC" -objects $file_obj
 
 # Set 'constrs_1' fileset properties
 set obj [get_filesets constrs_1]
-set_property -name "target_constrs_file" -value "[file normalize "$origin_dir/../../src/xdc/debug.xdc"]" -objects $obj
+set_property -name "target_constrs_file" -value "[file normalize "$origin_dir/../../../src/xdc/debug.xdc"]" -objects $obj
 set_property -name "target_part" -value "xczu7ev-ffvc1156-2-i" -objects $obj
-set_property -name "target_ucf" -value "[file normalize "$origin_dir/../../src/xdc/debug.xdc"]" -objects $obj
+set_property -name "target_ucf" -value "[file normalize "$origin_dir/../../../src/xdc/debug.xdc"]" -objects $obj
 
 # Create 'sim_1' fileset (if not found)
 if {[string equal [get_filesets -quiet sim_1] ""]} {
