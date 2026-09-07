@@ -1,5 +1,8 @@
 # gitignore script
 prj/p*
+prj/*.str
+prj/*.jou
+prj/*.log
 prj/Vivado_core_cache/*
 !prj/Vivado_core_cache/Note
 prj/Vivado_core_repository/*

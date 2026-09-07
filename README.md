@@ -42,3 +42,17 @@ A consistent naming convention shall be used for all project-defined names throu
 This convention applies to source files, directories, HDL objects, scripts, constraints, and other project-defined names across the repository.
 
 Vendor-defined names, language keywords, tool commands, tool properties, and standard interface names are excluded from this convention.
+
+## Repository Path Naming
+
+To keep the repository portable across Linux, Windows and macOS, avoid special characters in its filesystem path.
+
+Use only letters, numbers and underscores (`_`) in directory names.
+
+Do not use spaces, punctuation or characters such as:
+
+```text
+.  -  +  !  @  #  $  %  ^  &  *  (  )  [  ]  {  }  '  "  \  /  :
+```
+
+This rule applies to the repository directory and its parent directories.
