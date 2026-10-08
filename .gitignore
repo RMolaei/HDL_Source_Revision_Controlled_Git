@@ -8,9 +8,17 @@ prj/Vivado_core_cache/*
 prj/Vivado_core_repository/*
 !prj/Vivado_core_repository/Note
 
-src/core/**
-!src/core/
-!src/core/**/
-!src/core/vivado_core_generate.tcl
-!src/core/**/*.xci
-!src/core/**/*.xml
+# ISE
+# src/core/**
+# !src/core/
+# !src/core/**/
+# !src/core/**/*.xco
+# !src/core/**/*.xise
+
+# Vivado
+# src/core/**
+# !src/core/
+# !src/core/**/
+# !src/core/vivado_core_generate.tcl
+# !src/core/**/*.xci
+# !src/core/**/*.xml
